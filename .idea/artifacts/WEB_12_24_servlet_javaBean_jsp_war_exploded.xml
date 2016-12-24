@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WEB_12.24_servlet_javaBean_jsp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/WEB_12_24_servlet_javaBean_jsp_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="WEB_12.24_servlet_javaBean_jsp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WEB_12.24_servlet_javaBean_jsp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
