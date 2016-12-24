@@ -1,5 +1,7 @@
 # JDBC_demo
 servlet+JavaBean+JSP
 
-ÁôÑÔ°å³ÌĞò
-UTF-8±àÂë
+ç•™è¨€æ¿ç¨‹åº
+UTF-8ç¼–ç 
+
+é™„å¸¦mysqlå»ºè¡¨æ–‡ä»¶student.sql
