@@ -1,0 +1,23 @@
+<dataSource name="MySQL - test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema" />
+    <schema id="3" name="mysql" />
+    <schema id="4" name="performance_schema" />
+    <table id="5" parent="1" name="student" />
+    <column id="6" parent="5" name="id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="7" parent="5" name="name">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="8" parent="5" name="area">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="9" parent="5" name="message">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+  </database-model>
+</dataSource>

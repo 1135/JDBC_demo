@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>    <meta charset="gb2312">
-    <title>提交信息</title><!--本页面纯粹显示，具体功能在servlet中实现-->
+<head>    <meta charset="utf-8">
+    <title>鎻愪氦淇℃伅</title><!--鏈〉闈㈢函绮规樉绀猴紝鍏蜂綋鍔熻兘鍦╯ervlet涓疄鐜�-->
 </head>
 <body>
-<p align="center">提交信息</p>
+<p align="center">鎻愪氦淇℃伅</p>
 <form action="AddMessageServlet" method="post">
     <table border="1" align="center">
         <tr>
             <td>id</td>
-            <td><input type="text" name="id" size="10"></td><!--size是文本输入框的显示尺寸（即长度，高度固定）-->
+            <td><input type="text" name="id" size="10"></td><!--size鏄枃鏈緭鍏ユ鐨勬樉绀哄昂瀵革紙鍗抽暱搴︼紝楂樺害鍥哄畾锛�-->
         </tr>
         <tr>
             <td>name</td>
@@ -22,9 +22,9 @@
         <tr>
             <td>message</td>
             <td>
-                <!--testarea的显示效果靠行列调节 行rows 列cols-->
+                <!--testarea鐨勬樉绀烘晥鏋滈潬琛屽垪璋冭妭 琛宺ows 鍒梒ols-->
                 <textarea name="message" rows="7" cols="20"></textarea>
-                <!--错误写法  没有<input type="textarea">
+                <!--閿欒鍐欐硶  娌℃湁<input type="textarea">
                             <input type="textarea" name="message" rows="7" cols="20">
                             -->
             </td>

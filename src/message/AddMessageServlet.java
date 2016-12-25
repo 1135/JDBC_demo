@@ -56,28 +56,41 @@ public class AddMessageServlet extends javax.servlet.http.HttpServlet implements
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        resp.setContentType("text/html");
+
+        //设置响应内容类型
+        resp.setContentType("text/html;charset=utf-8");//servlet 一定要在response响应包里 指定字符集！
+
+        //逻辑实现
         PrintWriter out = resp.getWriter();
-        out.println("<h1>1111111111111</h1>");//测试输出
 
+        out.println("<h1>增加的数据</h1>");//测试输出
 
-        //如果html是GBK写的，应该这样才能正确编码。  byte b2[] = req.getParameter("name").getBytes("ISO-8859-1");  String s2=new String(b2);  if (b2[] == null) b2 = "";
-        //本项目所有页面编码、数据库编码均为UTF-8。  这样写也会导致数据库乱码： byte b4[] = req.getParameter("message").getBytes("UTF8");
         String s1 = req.getParameter("id");
+        byte[] b1=s1.getBytes("ISO-8859-1");
+        s1 = new String(b1,"UTF-8");
         out.println(s1);
 
-        byte b2[] = req.getParameter("name").getBytes("UTF-8");
-        String s2 = new String(b2);
+        //如果html是GBK写的，应该这样才能正确编码。  byte b2[] = req.getParameter("name").getBytes("ISO-8859-1");   if (b2[] == null) b2 = "";   String s2=new String(b2,"GBK");
+
+        //本项目所有页面编码、数据库编码均为UTF-8。
+
+        String s2 = req.getParameter("name");
+        byte[] b2=s2.getBytes("ISO-8859-1");//http协议用的 ISO-8859-1    先把经过8859-1的字符串变成bytes
+        s2 = new String(b2,"UTF-8");//把bytes 按照UTF-8恢复为字符串
         out.println(s2);
+
         String s3 = req.getParameter("area");
+        byte[] b3=s3.getBytes("ISO-8859-1");
+        s3 = new String(b3,"UTF-8");
         out.println(s3);
-        String s4 =req.getParameter("message");
+
+        String s4 = req.getParameter("message");
+        byte[] b4=s4.getBytes("ISO-8859-1");
+        s4 = new String(b4,"UTF-8");
+        out.println(s4);
 
 
         try {
-            //Statement stm=con.createStatement();
-            //stm.execute("set names utf8");
-
             PreparedStatement pstm = con.prepareStatement("INSERT INTO student VALUES(?,?,?,?)");
             pstm.setString(1, s1);
             pstm.setString(2, s2);
