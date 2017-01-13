@@ -4,6 +4,24 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <servlet>
+        <servlet-name>UpdateMessageServlet</servlet-name>
+        <servlet-class>message.UpdateMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateMessageServlet</servlet-name>
+        <url-pattern>/UpdateMessageServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DelMessageServlet</servlet-name>
+        <servlet-class>message.DelMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelMessageServlet</servlet-name>
+        <url-pattern>/DelMessageServlet</url-pattern>
+    </servlet-mapping>
 
 
     <servlet>

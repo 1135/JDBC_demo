@@ -4,6 +4,11 @@
   Date: 2016/11/9
   Time: 21:21
   To change this template use File | Settings | File Templates.
+
+
+
+
+  demo：jsp代码查询mysql
 --%>
 <%@ page import="java.sql.*" %>
 
